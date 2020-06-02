@@ -1,4 +1,4 @@
-## Mach95 Testing Project
+# Mach95 Testing Project
 
-# Installation guide:
+## Installation guide:
 
