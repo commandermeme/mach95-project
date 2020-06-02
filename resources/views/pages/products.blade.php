@@ -2,7 +2,7 @@
 
 @section('sidenav')
 
-<main>
+<div class="container">
     <div class="card-deck">
         <div class="card">
           <div class="card-body text-center">
@@ -29,7 +29,7 @@
           </div>
         </div>
       </div>
-</main>
+</div>
 
     
 
