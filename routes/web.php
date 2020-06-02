@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/products', function () {
-    return view('products');
+    return view('pages.products');
 });
 
 Auth::routes();
