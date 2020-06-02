@@ -1,6 +1,6 @@
 # Mach95 Testing Project
 
-## Installation guide:
+## Installation guides:
 
 ``` bash
 # clone
