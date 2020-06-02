@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    Alpha
+                    Hello world!
                 </div>
             </div>
         </div>
