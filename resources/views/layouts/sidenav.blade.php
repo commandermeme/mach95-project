@@ -9,7 +9,7 @@
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <a class="dropdown-item" href="#">Category 1</a>
         <a class="dropdown-item" href="#">Category 2</a>
-        <a class="dropdown-item" href="#">Category 3</a>
+        <a class="dropdown-item" href="#">Category</a>
         </div>
     </div>
     @yield('sidenav')
