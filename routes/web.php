@@ -22,4 +22,6 @@ Route::get('/admin', function () {
 
 Auth::routes();
 
-Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard.index');
+
+Route::resource('products', 'ProductsController');

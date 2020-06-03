@@ -3,32 +3,32 @@
     <nav class="sidebar-nav">
         <ul class="nav">
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{route('dashboard.index')}}">
                     <i class="nav-icon icon-home"></i> Dashboard
                 </a>
             </li>
 
             <li class="nav-item nav-dropdown">
-                <a class="nav-link" href="#">
-                    <i class="nav-icon icon-people"></i> Clients
+                <a class="nav-link" href="{{route('products.index')}}">
+                    <i class="nav-icon icon-social-dropbox"></i> Products
                 </a>
             </li>
 
             <li class="nav-item">
                 <a class="nav-link" href="#">
-                    <i class="nav-icon fa fa-car"></i> Vehicles
+                    <i class="nav-icon icon-credit-card"></i> Orders
                 </a>
             </li>
 
             <li class="nav-item nav-dropdown">
                 <a class="nav-link" href="#">
-                    <i class="nav-icon fa fa-warning"></i> Violations
+                    <i class="nav-icon fa fa-money"></i> Income
                 </a>
             </li>
 
             <li class="nav-item nav-dropdown">
                 <a class="nav-link" href="#">
-                    <i class="nav-icon fa fa-map-marker"></i> Regulations
+                    <i class="nav-icon fa fa-feed"></i> Feedback
                 </a>
             </li>
         </ul>

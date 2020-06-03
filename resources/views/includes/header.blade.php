@@ -5,8 +5,9 @@
     </button>
 
     <a class="navbar-brand" href="#">
-        <img class="navbar-brand-full" src="{{ asset('dist/img/brand/voad.svg') }}" width="89" height="25" alt="CoreUI Logo">
-        <img class="navbar-brand-minimized" src="{{ asset('dist/img/brand/sygnet.svg') }}" width="30" height="30" alt="CoreUI Logo">
+        {{-- <img class="navbar-brand-full" src="{{ asset('dist/img/brand/voad.svg') }}" width="89" height="25" alt="No Image"> --}}
+        <h3>MyShop</h3>
+        <img class="navbar-brand-minimized" src="{{ asset('dist/img/brand/sygnet.svg') }}" width="30" height="30" alt="No Image">
     </a>
 
     <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
