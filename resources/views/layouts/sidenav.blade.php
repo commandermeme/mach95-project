@@ -2,9 +2,9 @@
 
 @section('topnav')
 
-<main role="main" class="container-fluid pt-4">
+<main role="main" class="container-fluid bg">
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-3 pt-4">
         <div class="card">
             <div class="card-header">
                 <h4 class="text-center">Menu</h4>
