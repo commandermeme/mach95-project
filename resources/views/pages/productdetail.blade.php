@@ -8,8 +8,8 @@
             <div class="card" id="item">
                 <img class="card-img-top" src="img/glasses1.jpg" alt="Card image">
                 <div class="card-footer text-center mt-auto" style="border-top:0">     
-                    <button class="btn btn-primary btn-sm float-left" id="left" style="color:white">Button1 </button>
-                    <button class="btn btn-success btn-sm float-right" id="left" style="color:white">Button2 </button>                                          
+                    <button class="btn btn-primary btn-sm float-left" style="color:white">Button1 </button>
+                    <button class="btn btn-success btn-sm float-right" style="color:white">Button2 </button>                                          
                 </div> 
             </div>
         </div>
