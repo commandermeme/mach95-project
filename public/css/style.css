@@ -8,3 +8,7 @@
 #item {
     height: 400px;
 }
+
+.card button {
+    width: 70px;
+}
