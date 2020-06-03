@@ -14,10 +14,22 @@
     font-size: 20px;
 }
 
+#product {
+    height: 350px;
+}
+
+#product .card {
+  border: solid 0.1px #ff003c;
+}
+
+#product .btn {
+  background-color: #ff003c;
+}
 
 #item {
     height: 400px;
 }
+
 
 .card button {
     width: 70px;
@@ -35,6 +47,7 @@
 .badge-warning[href] {
   background-color: black;
 }
+
 #lblCartCount {
     font-size: 12px;
     background: none;
@@ -42,4 +55,8 @@
     padding: 0 5px;
     vertical-align: top;
     margin-left: -10px; 
+}
+
+main {
+    background-color: none;
 }
