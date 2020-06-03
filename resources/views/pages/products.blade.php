@@ -2,31 +2,61 @@
 
 @section('sidenav')
 
-<div class="row">
-    <div class="col">
-        <div class="card-deck">
-            <div class="card">
-                <div class="card-body text-center">
-                    <h5>Product 1</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, tempore corporis earum molestias rerum mollitia explicabo quam eos reiciendis velit aspernatur id. Dignissimos, expedita optio! Eligendi ipsa odit iste voluptatum.</p>
-                    <button class="btn btn-primary btn-sm float-left" style="color:white">Buy </button>                     
-                    <button class="btn btn-success btn-sm float-right" style="color:white">Buy </button>                     
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card-deck pt-4" id="product">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5>Product 1</h5>
+                    </div>
+                    <img class="card-img" src="img/glasses1.jpg" alt="Card image">
+                    <p class="card-text text-center">This is product 1.</p>
+                    <div class="card-footer text-center mt-auto" style="border-top:0">     
+                        <button class="btn btn-sm" style="color:white">Button1 </button>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-body text-center">
-                    <h5>Product 2</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, tempore corporis earum molestias rerum mollitia explicabo quam eos reiciendis velit aspernatur id. Dignissimos, expedita optio! Eligendi ipsa odit iste voluptatum.</p>
-                    <button class="btn btn-primary btn-sm float-left" style="color:white">Buy </button>                     
-                    <button class="btn btn-success btn-sm float-right" style="color:white">Buy </button>
+        </div>
+        <div class="col-md-4">
+            <div class="card-deck pt-4" id="product">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5>Product 1</h5>
+                    </div>
+                    <img class="card-img" src="img/glasses1.jpg" alt="Card image">
+                    <p class="card-text text-center">This is product 1.</p>
+                    <div class="card-footer text-center mt-auto" style="border-top:0">     
+                        <button class="btn btn-sm" style="color:white">Button1 </button>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-body text-center">
-                    <h5>Product 3</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, tempore corporis earum molestias rerum mollitia explicabo quam eos reiciendis velit aspernatur id. Dignissimos, expedita optio! Eligendi ipsa odit iste voluptatum.</p>
-                    <button class="btn btn-primary btn-sm float-left" style="color:white">Buy </button>                     
-                    <button class="btn btn-success btn-sm float-right" style="color:white">Buy </button>
+        </div>
+        <div class="col-md-4">
+            <div class="card-deck pt-4" id="product">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5>Product 1</h5>
+                    </div>
+                    <img class="card-img" src="img/glasses1.jpg" alt="Card image">
+                    <p class="card-text text-center">This is product 1.</p>
+                    <div class="card-footer text-center mt-auto" style="border-top:0">     
+                        <button class="btn btn-sm" style="color:white">Button1 </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card-deck pt-4" id="product">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5>Product 1</h5>
+                    </div>
+                    <img class="card-img" src="img/glasses1.jpg" alt="Card image">
+                    <p class="card-text text-center">This is product 1.</p>
+                    <div class="card-footer text-center mt-auto" style="border-top:0">     
+                        <button class="btn btn-sm" style="color:white">Button1 </button>
+                    </div>
                 </div>
             </div>
         </div>
