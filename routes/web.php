@@ -16,7 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/admin', function () {
+    return redirect('login');
+});
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
