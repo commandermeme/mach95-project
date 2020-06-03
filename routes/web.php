@@ -21,6 +21,10 @@ Route::get('/products', function () {
     return view('pages.products');
 });
 
+Route::get('/productdetail', function () {
+    return view('pages.productdetail');
+});
+
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
