@@ -15,21 +15,24 @@ class ProductsController extends Controller
             return view('pages.products')->with('products', $products);
         }
         else if($category == 'eyeglasses')
-        {
-            
-        return 'eyeglasses';
+        {    
+            $products = Product::where('category', '=', 'eyeglasses')->get();
+            return view('pages.products')->with('products', $products);
         }
         else if($category == 'necklace')
         {
-            return 'necklace';
+            $products = Product::where('category', '=', 'necklace')->get();
+            return view('pages.products')->with('products', $products);
         }
         else if($category == 'earrings')
         {
-            return 'earrings';
+            $products = Product::where('category', '=', 'earrings')->get();
+            return view('pages.products')->with('products', $products);
         }
         else if($category == 'hat')
         {
-            return 'hat';
+            $products = Product::where('category', '=', 'hat')->get();
+            return view('pages.products')->with('products', $products);
         }
     }
 
