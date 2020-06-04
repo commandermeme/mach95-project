@@ -13,21 +13,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.home');
-});
+Route::get('/', 'PagesController@home');
+Route::get('/products', 'PagesController@products');
 
-Route::get('/products', function () {
-    return view('pages.products');
-});
+// Route::get('/', function () {
+//     return view('pages.home');
+// });
 
-Route::get('/productdetail', function () {
-    return view('pages.productdetail');
-});
+// Route::get('/products', function () {
+//     return view('pages.products');
+// });
 
-Route::get('/checkout', function () {
-    return view('pages.checkout');
-});
+// Route::get('/productdetail', function () {
+//     return view('pages.productdetail');
+// });
+
+// Route::get('/checkout', function () {
+//     return view('pages.checkout');
+// });
 
 Auth::routes();
 
