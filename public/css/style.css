@@ -18,10 +18,6 @@
     height: 350px;
 }
 
-#product .card {
-  border: solid 0.1px #ff003c;
-}
-
 #product .btn {
   background-color: #ff003c;
 }
