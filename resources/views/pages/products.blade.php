@@ -4,15 +4,15 @@
 
 <div class="container-fluid">
     <div class="row">
-        @if(count($products) > 1)
+        @if(count($products) >= 1)
             @foreach($products as $product)
                 <div class="col-md-4">
-                    <div class="card-deck pt-4" id="product">
+                    <div class="card-deck pt-4" id="product" style="height: 350px">
                         <div class="card">
-                            <div class="card-body text-center" style="height: 250px">
+                            <div class="card-body text-center">
                             <h5><a href="/productdetail/{{$product->id}}" > {{$product->product_name}} </a></h5>
                             </div>
-                            <img class="card-img" src="img/glasses1.jpg" alt="Card image">
+                            <img class="card-img" src="/img/{{$product->image}}" alt="Card image">
                             <p class="card-text text-center"> {{$product->description}} </p>
                             <div class="card-footer text-center mt-auto" style="border-top:0">     
                                 <a href="/checkout"><button class="btn btn-sm" 
