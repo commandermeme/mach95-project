@@ -1,5 +1,4 @@
-.jumbotron{
-    /* height: 100vh; */
+.jumbotron {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,6 +6,18 @@
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/img/aboutcover.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;  
+    color: lightgray;
+    background-color: #eee;
 }
 
 .jumbotron p {
@@ -19,13 +30,8 @@
 }
 
 #product .btn {
-  background-color: #ff003c;
+    background-color: #ff003c;
 }
-
-#item {
-    height: 400px;
-}
-
 
 .card button {
     width: 70px;
