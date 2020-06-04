@@ -10,3 +10,4 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+database/migrations/2020_06_04_115634_product.php
