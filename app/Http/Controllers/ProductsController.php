@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Product;
 
 class ProductsController extends Controller
 {
@@ -13,7 +14,8 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        return view('products.index');
+        $products = Product::all();
+        return view('products.index')->with('products', $products);
     }
 
     /**
@@ -34,7 +36,29 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // return $request;
+        //Handle file upload
+        if ($request->hasFile('prod_image')) {
+            $filenameWithExt = $request->file('prod_image')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extention = $request->file('prod_image')->getClientOriginalExtension();
+            $fileNameToStore = $filename. '_' .time(). '.' .$extention;
+            $path = $request->file('prod_image')->storeAs('public/prod_images', $fileNameToStore);
+            
+        } else {
+            $fileNameToStore = 'noimage.jpg';
+        }
+
+        $product = new Product;
+        $product->model = $request->model;
+        $product->brand_name = $request->brand_name;
+        $product->description = $request->description;
+        $product->stock = $request->stock;
+        $product->type = $request->type;
+        $product->prod_image = $fileNameToStore;
+        $product->save();
+
+        return redirect('products');
     }
 
     /**

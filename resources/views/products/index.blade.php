@@ -18,20 +18,20 @@
                         <table  class="table table-striped table-borderless datatable table-responsive-xl">
                             <thead>
                                 <tr>
-                                    <th>Item No.</th>
-                                    <th>Name</th>
-                                    <th>Description</th>
+                                    <th>Model</th>
+                                    <th>Brand Name</th>
+                                    <th>Type</th>
                                     <th>Availability</th>
                                     <th>Option</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {{-- @foreach ($clients as $client) --}}
+                                @foreach ($products as $product)
                                     <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td>{{ $product->model }}</td>
+                                        <td>{{ $product->brand_name }}</td>
+                                        <td>{{ $product->type }}</td>
+                                        <td>{{ $product->stock }}</td>
                                         <td>
                                             <div class="btn-group">
                                                 <a href="" class="btn btn-outline-primary mr-1">
@@ -48,7 +48,7 @@
                                             </div>
                                         </td>
                                     </tr>
-                                {{-- @endforeach --}}
+                                @endforeach
                             </tbody>
                         </table>
                     {{-- </div> --}}
@@ -56,10 +56,10 @@
             </div> 
             
             <!--MODALS-->
-            <!--add client modal-->
+            <!--add product modal-->
             <div class="modal fade" id="addProduct" tabindex="-1" role="dialog" aria-labelledby="addProductLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
-                    <form action="" method="POST" id="signupForm">
+                    <form action="{{ route('products.store') }}" method="POST" id="signupForm" enctype="multipart/form-data">
                         @csrf
                         <div class="modal-content">
                             <div class="modal-header bg-primary">
@@ -74,14 +74,14 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="fname">Item No.</label>
-                                            <input type="text" id="fname" class="form-control" name="fname">
+                                            <label for="model">Model</label>
+                                            <input type="text" id="model" class="form-control" name="model">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="lname">Name</label>
-                                            <input type="text" id="lname" class="form-control" name="lname">
+                                            <label for="brand_name">Brand Name</label>
+                                            <input type="text" id="brand_name" class="form-control" name="brand_name">
                                         </div>
                                     </div>
                                 </div>
@@ -92,22 +92,26 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="phone">Stock</label>
-                                            <input type="number" id="phone" class="form-control" name="phone">
+                                            <label for="stock">Stock</label>
+                                            <input type="number" id="stock" class="form-control" name="stock">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="licence">Type</label>
-                                            <select id="licence" class="form-control" name="licence">
+                                            <label for="type">Type</label>
+                                            <select id="type" class="form-control" name="type">
                                                 <option value="">Please Select</option>
-                                                <option value="watch">watch</option>
-                                                <option value="earing">earing</option>
+                                                <option value="necklace">necklace</option>
+                                                <option value="cap">cap</option>
                                                 <option value="eyeglass">eyeglass</option>
-                                                <option value="hat">hat</option>
+                                                <option value="earring">earring</option>
                                             </select>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="prod_image">Image</label>
+                                    <input type="file" name="prod_image" id="prod_image" class="form-control">
                                 </div>
                                 
                             </div>
