@@ -17,9 +17,10 @@
                         </a>
                         
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <a class="dropdown-item" href="">Category 1</a>
-                            <a class="dropdown-item" href="">Category 2</a>
-                            <a class="dropdown-item" href="">Category 3</a>
+                            <a class="dropdown-item" href="/products/{{'eyeglasses'}}">Eyeglasses</a>
+                            <a class="dropdown-item" href="/products/{{'necklace'}}">Necklace</a>
+                            <a class="dropdown-item" href="/products/{{'earrings'}}">Earrings</a>
+                            <a class="dropdown-item" href="/products/{{'hat'}}">Hat</a>
                         </div>
                     </div>                  
                 </div>
