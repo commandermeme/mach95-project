@@ -11,11 +11,12 @@
 
 
     <!--styles-->
-    <link href="{{ asset('dist/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('dist/css/custom_style.css') }}" rel="stylesheet">
     <link href="{{ asset('dist/vendors/pace-progress/css/pace.min.css') }}" rel="stylesheet">
     <link href="{{ asset('dist/vendors/datatables.net-bs4/css/dataTables.bootstrap4.css') }}" rel="stylesheet">
     <link href="{{ asset('dist/vendors/quill/css/quill.snow.css') }}" rel="stylesheet">
     <link href="{{ asset('dist/vendors/ion-rangeslider/css/ion.rangeSlider.min.css') }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
     <!--Icons-->
     <link rel="shortcut icon" href="{{ asset('dist/img/brand/favicon-voad-2.png') }}" type="image/png">
