@@ -11,23 +11,21 @@
             <div class="col-md-9 mt-4">
                 <div class="row">
                     @foreach ($products as $product)
-                        <div class="col-md-4 mb-4">
-                            <div class="card-deck" id="product" style="height: 350px">
+                        {{-- <div class="col-md-4 "> --}}
+                            <div class="card-deck col-md-4 mb-4">
                                 <div class="card">
-                                    <div class="card-body text-center">
-                                    <h5><a href="">{{ $product->brand_name }}</a></h5>
+                                    <img class="card-img-top" src="storage/prod_images/{{ $product->prod_image }}" alt="no image">
+                                    <div class="card-body">
+                                        <h3 class="card-title">{{ $product->brand_name }}</h3>
+                                        <p class="lead float-right">Php{{ number_format($product->price, 2) }}</p>
+                                        <p class="lead">Model: {{ $product->model }}<p>
                                     </div>
-                                    <img class="card-img" src="storage/prod_images/{{ $product->prod_image }}" alt="Card image">
-                                    <p class="card-text text-center">{{ $product->description }}.</p>
-                                    <div class="card-footer text-center mt-auto" style="border-top:0">     
-                                        <a href="#"><button class="btn btn-sm" 
-                                            style="color:white; background-color: #ff003c;">
-                                            Buy</button>
-                                        </a>
+                                    <div class="card-footer">
+                                        <a href="{{ route('checkout.index') }}" class="btn btn-lg btn-primary">Buy</a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        {{-- </div> --}}
                     @endforeach
                 </div>
             </div>

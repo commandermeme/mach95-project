@@ -22,6 +22,7 @@
                                     <th>Brand Name</th>
                                     <th>Type</th>
                                     <th>Availability</th>
+                                    <th>Price</th>
                                     <th>Option</th>
                                 </tr>
                             </thead>
@@ -32,6 +33,7 @@
                                         <td>{{ $product->brand_name }}</td>
                                         <td>{{ $product->type }}</td>
                                         <td>{{ $product->stock }}</td>
+                                        <td>{{ number_format($product->price, 2) }}</td>
                                         <td>
                                             <div class="btn-group">
                                                 <a href="" class="btn btn-outline-primary mr-1">
@@ -109,9 +111,19 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="prod_image">Image</label>
-                                    <input type="file" name="prod_image" id="prod_image" class="form-control">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="form-group">
+                                            <label for="prod_image">Image</label>
+                                            <input type="file" name="prod_image" id="prod_image" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="price">Price</label>
+                                            <input type="number" id="price" class="form-control" name="price">
+                                        </div>
+                                    </div>
                                 </div>
                                 
                             </div>
