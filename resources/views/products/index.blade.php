@@ -39,12 +39,12 @@
                                                 <a href="{{ route('products.edit', $product->id) }}" type="button" class="btn btn-outline-primary mr-1">
                                                     <i class="fa fa-edit"></i>
                                                 </a>
-                                                <form class="d-inline mr-1" action="" method="POST">
+                                                <form class="d-inline mr-1" action="{{ route('products.destroy', $product->id) }}" method="POST">
                                                     @method('DELETE')
                                                     @csrf
                                                     <button type="submit" onclick="return confirm('Are you sure to delete?')" class="btn btn-outline-primary"><i class="fa fa-close"></i></button>
                                                 </form>
-                                                <a href="" class="btn btn-outline-primary">
+                                                <a href="{{ route('products.show', $product->id) }}" class="btn btn-outline-primary">
                                                     <i class="fa fa-eye"></i>
                                                 </a>
                                             </div>
