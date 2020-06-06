@@ -27,6 +27,11 @@ $('#signupForm').validate({
     street: 'required',
     speed_limit: 'required',
     location: 'required',
+    model: 'required',
+    brand_name: 'required',
+    description: 'required',
+    stock: 'required',
+    price: 'required',
     username: {
       required: true,
       minlength: 2

@@ -36,7 +36,7 @@
                                         <td>{{ number_format($product->price, 2) }}</td>
                                         <td>
                                             <div class="btn-group">
-                                                <a href="" class="btn btn-outline-primary mr-1">
+                                                <a href="{{ route('products.edit', $product->id) }}" type="button" class="btn btn-outline-primary mr-1">
                                                     <i class="fa fa-edit"></i>
                                                 </a>
                                                 <form class="d-inline mr-1" action="" method="POST">

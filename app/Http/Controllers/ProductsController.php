@@ -36,7 +36,7 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        // return $request;
+        return $request;
         //Handle file upload
         if ($request->hasFile('prod_image')) {
             $filenameWithExt = $request->file('prod_image')->getClientOriginalName();
@@ -81,7 +81,8 @@ class ProductsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $product = Product::find($id);
+        return view('products.edit')->with('product', $product);
     }
 
     /**
@@ -93,7 +94,29 @@ class ProductsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return $request;
+        if ($request->hasFile('prod_image')) {
+            $filenameWithExt = $request->file('prod_image')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extention = $request->file('prod_image')->getClientOriginalExtension();
+            $fileNameToStore = $filename. '_' .time(). '.' .$extention;
+            $path = $request->file('prod_image')->storeAs('public/prod_images', $fileNameToStore);
+            
+        } else {
+            $fileNameToStore = 'noimage.jpg';
+        }
+
+        $product = Product::find($id);
+        $product->model = $request->model;
+        $product->brand_name = $request->brand_name;
+        $product->description = $request->description;
+        $product->stock = $request->stock;
+        $product->type = $request->type;
+        $product->price = $request->price;
+        $product->prod_image = $fileNameToStore;
+        $product->save();
+
+        return redirect('products');
     }
 
     /**
