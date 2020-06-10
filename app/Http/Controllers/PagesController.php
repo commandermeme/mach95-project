@@ -15,9 +15,4 @@ class PagesController extends Controller
     {
         return view('pages.about');
     }
-
-    public function checkout()
-    {
-        return view('pages.checkout');
-    }
 }

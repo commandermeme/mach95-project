@@ -62,3 +62,7 @@
 main {
     background-color: none;
 }
+
+#productname {
+    font-size: 30px;
+}

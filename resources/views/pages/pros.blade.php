@@ -10,14 +10,14 @@
                     <div class="card-deck pt-4" id="product" style="height: 350px">
                         <div class="card">
                             <div class="card-body text-center">
-                                <h5 id="productname"><a href="/productdetail/{{$product->id}}" > {{$product->product_name}} </a></strong></h5>
+                            <h5><a href="/productdetail/{{$product->id}}" > {{$product->product_name}} </a></h5>
                             </div>
                             <img class="card-img" src="/img/{{$product->image}}" alt="Card image">
                             <p class="card-text text-center"> {{$product->description}} </p>
                             <div class="card-footer text-center mt-auto" style="border-top:0">     
-                                <a href="/checkout/{{$product->id}}"><button class="btn btn-sm" 
-                                    style="color:white; background-color: #ff003c; width:200px; height:35px;">
-                                    Add to cart</button>
+                                <a href="/checkout"><button class="btn btn-sm" 
+                                    style="color:white; background-color: #ff003c;">
+                                    Buy</button>
                                 </a>
                             </div>
                         </div>

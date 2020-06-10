@@ -42,8 +42,9 @@ class ProductsController extends Controller
         return view('pages.productdetail')->with('product', $product);
     }
 
-    public function eyeglasses()
+    public function checkout($id)
     {
-        return 'eyeglasses';
+        $product = Product::find($id);
+        return view('pages.checkout')->with('product', $product);
     }
 }
