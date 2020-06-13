@@ -17,7 +17,7 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string('model')->nullable();
             $table->string('brand_name')->nullable();
-            $table->$table->longText('description')->nullable();
+            $table->longText('description')->nullable();
             $table->string('type')->nullable();
             $table->integer('stock')->nullable();
             $table->timestamps();
