@@ -9,72 +9,57 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <!--styles-->
+    <link href="{{ asset('dist/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('dist/vendors/pace-progress/css/pace.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('dist/vendors/datatables.net-bs4/css/dataTables.bootstrap4.css') }}" rel="stylesheet">
+    <link href="{{ asset('dist/vendors/quill/css/quill.snow.css') }}" rel="stylesheet">
+    <link href="{{ asset('dist/vendors/ion-rangeslider/css/ion.rangeSlider.min.css') }}" rel="stylesheet">
 
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!--Icons-->
+    {{-- <link rel="shortcut icon" href="{{ asset('dist/img/brand/favicon-voad-2.png') }}" type="image/png"> --}}
+    {{-- <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet"> --}}
+    <link href="{{ asset('dist/vendors/@coreui/icons/css/coreui-icons.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('dist/vendors/flag-icon-css/css/flag-icon.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('dist/vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('dist/vendors/simple-line-icons/css/simple-line-icons.css') }}" rel="stylesheet">
+    
+    
 </head>
-<body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <main class="py-4">
+<body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
+    @include('includes.header') 
+    <div class="app-body">
+        @include('includes.sidebar') 
+        <main class="main">
             @yield('content')
         </main>
     </div>
+    @include('includes.footer') 
+    
+    <!-- Bootstrap and necessary plugins-->
+    <script src="{{ asset('dist/vendors/jquery/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('dist/vendors/popper.js/js/popper.min.js') }}"></script>
+    <script src="{{ asset('dist/vendors/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('dist/vendors/pace-progress/js/pace.min.js') }}"></script>
+    <script src="{{ asset('dist/vendors/perfect-scrollbar/js/perfect-scrollbar.min.js') }}"></script>
+    <script src="{{ asset('dist/vendors/@coreui/coreui-pro/js/coreui.min.js') }}"></script>
+
+    <!-- Plugins and scripts required by this view-->
+    <script src="{{ asset('dist/vendors/chart.js/js/Chart.min.js') }}"></script>
+    <script src="{{ asset('dist/vendors/@coreui/coreui-plugin-chartjs-custom-tooltips/js/custom-tooltips.min.js') }}"></script>
+    <script src="{{ asset('dist/js/main.js') }}"></script>
+    <script src="{{ asset('dist/vendors/datatables.net/js/jquery.dataTables.js') }}"></script>
+    <script src="{{ asset('dist/vendors/datatables.net-bs4/js/dataTables.bootstrap4.js') }}"></script>
+    <script src="{{ asset('dist/js/datatables.js') }}"></script>
+    <script src="{{ asset('dist/vendors/quill/js/quill.min.js') }}"></script>
+    <script src="{{ asset('dist/js/text-editor.js') }}"></script>
+    <script src="{{ asset('dist/vendors/ion-rangeslider/js/ion.rangeSlider.min.js') }}"></script>
+    <script src="{{ asset('dist/js/sliders.js') }}"></script>
+    <script src="{{ asset('dist/js/google-maps.js') }}"></script>
+    {{-- <script src="{{ asset('https://maps.googleapis.com/maps/api/js?callback=InitMap&amp;key=AIzaSyASyYRBZmULmrmw_P9kgr7_266OhFNinPA') }}"></script> --}}
+    <script src="{{ asset('dist/vendors/jquery-validation/js/jquery.validate.js') }}"></script>
+    <script src="{{ asset('dist/js/validation.js') }}"></script>
+    
 </body>
 </html>
